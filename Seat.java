@@ -21,4 +21,14 @@ public class Seat {
     public void setColumn(int column) {
         this.column = column;
     }
+    public int getPrise(){
+        return row <= 4 ? 10:8;
+    }
+    @Override
+    public boolean equals(Object o){
+        if (this == n) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Seat seat = (Seat) o;
+        return row == seat.row && column == seat.column;
+    }
 }
